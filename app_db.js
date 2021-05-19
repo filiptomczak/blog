@@ -26,7 +26,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/",function(req,res){
-  console.log("witam");
   Post.find().sort({date:-1}).exec(function(err,postsFound){
       if(!err){
           res.render("home",{startingContent:homeStartingContent, postsHome:postsFound});
@@ -68,7 +67,9 @@ app.get("/post/:id",function(req,res){
     }
   });
 });
-
+app.post("/Back",function(req,res){
+  res.redirect("/");
+});
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });

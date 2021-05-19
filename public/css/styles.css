@@ -34,7 +34,12 @@
 	font-size: 12px;
   color: #fff;
 }
-
+.post-href{
+  color:#1abc9c;
+}
+.post-href:hover{
+  color:#08aa8a;
+}
 /***** COMPOSE *****/
 /*label*/
 .lbl{
@@ -50,6 +55,12 @@ textarea {
     resize: vertical;
   }
 /*button*/
-.publish-btn{
-    margin: 30px 0 0 0;
+.btn-color{
+  margin: 30px 0 0 0;
+  background-color: #1abc9c;
+  color:white;
+}
+.btn-color:hover{
+  background-color: #09ab8b;
+  color:white;
 }
